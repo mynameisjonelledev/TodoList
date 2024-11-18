@@ -1,0 +1,79 @@
+body {
+  font-family: Montserrat Alternates;
+  background-color: #023047;
+  color: white;
+
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+div, button {
+  font-family: Montserrat Alternates;
+}
+
+.navbar-main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.navbar-brand {
+  font-size: 25px;
+}
+
+.navbar-brand-caption {
+  font-size: small;
+}
+
+.navbar-button {
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 50px;
+  font-weight: 500;
+
+}
+
+
+.todolist-title {
+  margin-top: 50px;
+  margin-left: 60px;
+  font-size: 30px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.todo-text {
+  margin-left: 60px;
+  padding: 10px;
+  
+}
+
+.input-text-date-btn {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 600px 150px 100px;
+  column-gap: 10px;
+}
+
+.todo-output {
+  text-align: center;
+  margin-top: 20px;
+
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 600px 150px 100px;
+  column-gap: 10px;
+
+}
+
+
+footer {
+  margin-top: 480px;
+  text-align: center;
+}
+
