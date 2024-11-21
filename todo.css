@@ -1,14 +1,19 @@
 body {
-  font-family: Montserrat Alternates;
-  background-color: #023047;
+  font-family: "Inter", sans-serif;
+  background-color: black;
   color: white;
 
   margin-left: 60px;
   margin-right: 60px;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 div, button {
-  font-family: Montserrat Alternates;
+  font-family: "Inter", sans-serif;
 }
 
 .navbar-main-container {
@@ -27,6 +32,7 @@ div, button {
 
 .navbar-brand-caption {
   font-size: small;
+  cursor: default;
 }
 
 .navbar-button {
@@ -35,7 +41,12 @@ div, button {
   padding-right: 10px;
   border-radius: 50px;
   font-weight: 500;
+  cursor: pointer;
 
+}
+
+.navbar-button:active {
+  opacity: 0.5;
 }
 
 
@@ -48,7 +59,6 @@ div, button {
 }
 
 .todo-text {
-  margin-left: 60px;
   padding: 10px;
   
 }
@@ -73,7 +83,45 @@ div, button {
 
 
 footer {
-  margin-top: 480px;
+  margin-top: auto;
   text-align: center;
 }
 
+
+.add-btn {
+  background-color: #60a561;
+  font-size: 15px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background-color: #e34a6f;
+  border: none;
+  color: white;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.name-div, .dueDate-div {
+  background-color: white;
+  color: black;
+  font-size: 15px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.name-div {
+  text-align: start;
+}
+
+.night-button {
+  background-color: black;
+  color: white;
+}
+
+.day-button {
+  background-color: white;
+  color: black;
+}
