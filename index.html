@@ -8,10 +8,11 @@
   <link rel="icon" type="icon/x-image" href="https://cdn2.iconfinder.com/data/icons/greenline/512/check-512.png"> 
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="todo.css">
+  <link rel="stylesheet" href="todo.media.css">
   <script src="todo.js"></script>
 
 </head>
@@ -19,31 +20,32 @@
 
   <nav class="navbar-main-container">
     <div class="navbar-div">
-      <div class="navbar-brand">DoItDifferently</div>
-      <div class="navbar-brand-caption">Online Todo List</div>
+      <a href="http://jonelcubiodev.site/" target="_blank"><div class="navbar-brand" title="DoItDifferently - Online Todo List">DoItDifferently</div></a>
+      <div class="navbar-brand-caption" title="Made with love by Jonelle 😊">Online Todo List</div>
     </div>
     
-    <button class="navbar-button">Powered by</button>
+    <button class="navbar-button js-navbar-button" onclick="surpriseMe ();">Surprise me!</button>
   </nav>
 
   <main>
-    <div class="todolist-title">Todo List</div>
+    <div class="todolist-title" title="Todo List">Todo List</div>
 
     <div class="input-text-date-btn">
       <input type="text" placeholder="Todo name" class="todo-text js-todo-text" onkeydown="onKeyDownInput (event);">
 
       <input type="date" class="todo-date">
 
-      <button type="submit" onclick="addTodo ();">Add</button>
+      <button type="submit" class="add-btn" onclick="addTodo ();">Add</button>
     </div>
 
     <div class="todo-output"></div>
     
   </main>
   
-  <footer>
+ <!-- <footer>
     <div class="footer-div">Thanks for visiting!</div>
     <div>Made with love by Jonelle</div>
   </footer>
+  --> 
 </body>
 </html>
