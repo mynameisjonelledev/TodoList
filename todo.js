@@ -1,7 +1,8 @@
-const todoList = [];
+const todoList = JSON.parse(localStorage.getItem('todoList')) ||[]; //✅
 
 renderTodoList();
-isFooter ();
+
+
 
 function renderTodoList() {
   let todoListHTML = '';
@@ -12,16 +13,18 @@ function renderTodoList() {
     const {name, dueDate} = todoObject;
 
     const html = `
-    <div>${name}</div>
-    <div>${dueDate}</div>
+    <div class="name-div">${name}</div>
+    <div class="dueDate-div">${dueDate}</div>
     <button onclick="deleteTodo(${i},1);
-    renderTodoList();">
+    renderTodoList();" 
+    class="delete-btn">
     Delete</button>`
 
     todoListHTML += html;
   }
 
   document.querySelector('.todo-output').innerHTML = todoListHTML;
+  
 }
 
 function addTodo () {
@@ -39,6 +42,9 @@ function addTodo () {
   inputElement.value = '';
 
   renderTodoList();
+
+  // Whenever we update the todo list, save in localStorage.
+  saveToStorage();
 }
 
 function onKeyDownInput (event) {
@@ -51,6 +57,11 @@ function deleteTodo(index) {
   todoList.splice(index, 1);
   renderTodoList();
 }
+
+function saveToStorage() {
+  localStorage.setItem('todoList', JSON.stringify(todoList));
+}
+
 
 /* function isFooter () {
   const footerElement = document.querySelector('.footer-div');
@@ -70,5 +81,33 @@ function deleteTodo(index) {
   }
   
 } */ 
+
+
+// Gawa gawa ko lang 'tong code na 'to. Gumagana naman
+// Kaso kulang ang functionality.
+function surpriseMe () {
+  const surpriseElement = document.querySelector('.js-navbar-button, .night-button, .day-button');
+
+  if (surpriseElement.innerHTML === 'Surprise me!') {
+    surpriseElement.classList.remove('js-navbar-button');
+    surpriseElement.classList.add('night-button');
+    surpriseElement.innerHTML = 'Night';
+    console.log('Changed to Night');
+
+  } else if (surpriseElement.innerHTML === 'Night') {
+    surpriseElement.classList.remove('night-button');
+    surpriseElement.classList.add('day-button');
+    surpriseElement.innerHTML = 'Day';
+    console.log('Changed to Day');
+
+  }  else if (surpriseElement.innerHTML === 'Day') {
+    surpriseElement.classList.remove('day-button');
+    surpriseElement.classList.add('js-navbar-button');
+    surpriseElement.innerHTML = 'Surprise me!';
+  }
+}
+
+
+
 
 
