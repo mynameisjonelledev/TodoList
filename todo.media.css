@@ -1,0 +1,42 @@
+@media (max-width:768px) {
+  .input-text-date-btn {
+    grid-template-columns: 400px 150px 100px;
+  }
+
+  .todo-output {
+    grid-template-columns: 400px 150px 100px;
+
+  }
+}
+
+@media (max-width:425px) {
+  .input-text-date-btn {
+    grid-template-columns: 200px 100px 50px;
+  }
+
+  .todo-output {
+    grid-template-columns: 200px 100px 50px;
+
+  }
+
+  .delete-btn {
+    font-size: 12px;
+  }
+
+  .navbar-button {
+    display: none;
+  }
+}
+
+
+@media (max-width:375px) {
+  .input-text-date-btn {
+    grid-template-columns: 150px 100px 50px;
+  }
+
+  .todo-output {
+    grid-template-columns: 150px 100px 50px;
+
+  }
+
+}
