@@ -2,6 +2,7 @@
   body {
     background-image: url('https://images.pexels.com/photos/6507446/pexels-photo-6507446.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
   background-size: cover; 
+     background-repeat: no-repeat;
   }
 }
 
@@ -9,6 +10,7 @@
   body {
     background-image: url('https://images.pexels.com/photos/7040561/pexels-photo-7040561.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
   background-size: cover; 
+     background-repeat: no-repeat;
   }
 }
 
@@ -50,6 +52,7 @@
   body {
     background-image: url('https://images.pexels.com/photos/19537690/pexels-photo-19537690/free-photo-of-rocky-mountains-landscape.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
   background-size: cover; 
+     background-repeat: no-repeat;
   }
 }
 
@@ -67,6 +70,7 @@
   body {
     background-image: url('https://images.pexels.com/photos/932638/pexels-photo-932638.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
   background-size: cover; 
+     background-repeat: no-repeat;
   }
 
 }
