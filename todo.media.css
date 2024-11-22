@@ -1,3 +1,18 @@
+@media (max-width:1440px) {
+  body {
+    background-image: url('https://images.pexels.com/photos/6507446/pexels-photo-6507446.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-size: cover; 
+  }
+}
+
+@media (max-width:1024px) {
+  body {
+    background-image: url('https://images.pexels.com/photos/7040561/pexels-photo-7040561.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-size: cover; 
+  }
+}
+
+
 @media (max-width:768px) {
   .input-text-date-btn {
     grid-template-columns: 400px 150px 100px;
@@ -6,6 +21,11 @@
   .todo-output {
     grid-template-columns: 400px 150px 100px;
 
+  }
+
+  body {
+    background-image: url('https://images.pexels.com/photos/2525903/pexels-photo-2525903.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-size: cover; 
   }
 }
 
@@ -26,6 +46,11 @@
   .navbar-button {
     display: none;
   }
+
+  body {
+    background-image: url('https://images.pexels.com/photos/19537690/pexels-photo-19537690/free-photo-of-rocky-mountains-landscape.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-size: cover; 
+  }
 }
 
 
@@ -37,6 +62,11 @@
   .todo-output {
     grid-template-columns: 150px 100px 50px;
 
+  }
+
+  body {
+    background-image: url('https://images.pexels.com/photos/932638/pexels-photo-932638.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-size: cover; 
   }
 
 }
