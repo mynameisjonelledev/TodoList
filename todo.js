@@ -15,7 +15,7 @@ function renderTodoList() {
     const html = `
     <div class="name-div">${name}</div>
     <div class="dueDate-div">${dueDate}</div>
-    <button onclick="deleteTodo(${i},1);
+    <button onclick="= todolist.splice(${i}, 1);
     renderTodoList();" 
     class="delete-btn">
     Delete</button>`
@@ -53,10 +53,7 @@ function onKeyDownInput (event) {
   }
 }
 
-function deleteTodo(index) {
-  todoList.splice(index, 1);
-  renderTodoList();
-}
+
 
 function saveToStorage() {
   localStorage.setItem('todoList', JSON.stringify(todoList));
