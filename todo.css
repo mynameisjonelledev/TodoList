@@ -2,7 +2,6 @@ body {
   font-family: "Inter", sans-serif;
   /* background-color: black; */
   color: white;
-  height: 100vh;
   margin-left: 60px;
   margin-right: 60px;
 
@@ -99,12 +98,17 @@ footer {
   cursor: pointer;
 }
 
+.add-btn:active, .delete-btn:active {
+  opacity: 0.5;
+}
+
 .delete-btn {
   background-color: #e34a6f;
   border: none;
   color: white;
   margin-bottom: 10px;
   padding: 10px;
+  cursor: pointer;
 }
 
 .name-div, .dueDate-div {
@@ -117,6 +121,7 @@ footer {
 
 .name-div {
   text-align: start;
+  text-transform: capitalize;
 }
 
 .night-button {
@@ -127,4 +132,9 @@ footer {
 .day-button {
   background-color: white;
   color: black;
+}
+
+.footer-greet {
+  text-align: center;
+  margin-top: 370px;
 }
