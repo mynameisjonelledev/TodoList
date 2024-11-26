@@ -1,4 +1,10 @@
-const todoList = JSON.parse(localStorage.getItem('todoList')) ||[]; //✅
+const todoList = JSON.parse(localStorage.getItem('todoList')) ||[{
+  name: 'make dinner',
+  dueDate: '2024-12-22'
+}, {
+  name: 'wash dishes',
+  dueDate: '2024-12-22'
+}]; //✅
 
 renderTodoList();
 
@@ -7,27 +13,36 @@ renderTodoList();
 function renderTodoList() {
   let todoListHTML = '';
 
-  for (let i = 0; i < todoList.length; i++) {
-    const todoObject = todoList[i];
-
+  todoList.forEach((todoObject, index) => {
     const {name, dueDate} = todoObject;
 
     const html = `
     <div class="name-div">${name}</div>
     <div class="dueDate-div">${dueDate}</div>
-    <button onclick="= todolist.splice(${i}, 1);
-    renderTodoList();" 
-    class="delete-btn">
+    <button class="delete-btn js-delete-todo-button">
     Delete</button>`
 
     todoListHTML += html;
-  }
+  });
 
   document.querySelector('.todo-output').innerHTML = todoListHTML;
   
+  document.querySelectorAll('.js-delete-todo-button').forEach((deleteButton, index) => {
+    deleteButton.addEventListener('click', () => {
+      todoList.splice(index, 1);
+      renderTodoList();
+    });
+  });
+
+ 
 }
 
-function addTodo () {
+document.querySelector('.js-add-todo-button').addEventListener('click', () => {
+  addTodo();
+});
+
+
+function addTodo() {
   const inputElement = document.querySelector('.todo-text');
   const dateElement = document.querySelector('.todo-date');
 
@@ -47,13 +62,18 @@ function addTodo () {
   saveToStorage();
 }
 
+
+
 function onKeyDownInput (event) {
   if (event.key === 'Enter') {
     addTodo ();
   }
 }
 
-
+function deleteTodo(index) {
+  todoList.splice(index, 1);
+  renderTodoList();
+}
 
 function saveToStorage() {
   localStorage.setItem('todoList', JSON.stringify(todoList));
@@ -80,31 +100,13 @@ function saveToStorage() {
 } */ 
 
 
-// Gawa gawa ko lang 'tong code na 'to. Gumagana naman
-// Kaso kulang ang functionality.
-function surpriseMe () {
-  const surpriseElement = document.querySelector('.js-navbar-button, .night-button, .day-button');
-
-  if (surpriseElement.innerHTML === 'Surprise me!') {
-    surpriseElement.classList.remove('js-navbar-button');
-    surpriseElement.classList.add('night-button');
-    surpriseElement.innerHTML = 'Night';
-    console.log('Changed to Night');
-
-  } else if (surpriseElement.innerHTML === 'Night') {
-    surpriseElement.classList.remove('night-button');
-    surpriseElement.classList.add('day-button');
-    surpriseElement.innerHTML = 'Day';
-    console.log('Changed to Day');
-
-  }  else if (surpriseElement.innerHTML === 'Day') {
-    surpriseElement.classList.remove('day-button');
-    surpriseElement.classList.add('js-navbar-button');
-    surpriseElement.innerHTML = 'Surprise me!';
+document.body.addEventListener('keydown', (event) => {
+  if (event.key) {
+    document.querySelector('.footer-greet').innerHTML = `Made with love by <a href="https://mynameisjonelledev.github.io/jonellewebpage/">Jonel Cubio</a>`;
   }
-}
+});
 
-
-
-
+document.body.addEventListener('click', () => {
+  document.querySelector('.footer-greet').innerHTML = `Made with love by <a href="https://mynameisjonelledev.github.io/jonellewebpage/">Jonel Cubio</a>`;
+});
 
